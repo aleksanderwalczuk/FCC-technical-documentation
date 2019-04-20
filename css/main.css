@@ -103,6 +103,7 @@ textarea {
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
 .grid-container {
@@ -119,13 +120,13 @@ body {
     /*max-height: 100vh;*/
     min-width: 240px;
 }
+
 .navigation > div {
     position: fixed;
     min-width: inherit;
     border-right: 1px solid #000;
     /*overflow: auto;*/
-    height: 100vh
-;
+    height: 100vh;
 }
 
 .navigation > div > .nav-heading {
@@ -183,12 +184,13 @@ body {
     height: 5vh;
     border-bottom: 1px solid black;
 }
+
 .nav-link > span {
     margin: auto;
 }
 
 /*Referring to last nav element*/
-.navigation footer{
+.navigation footer {
     width: 100%;
     background: #FFEF80;
     /*height: 10vh;*/
@@ -202,6 +204,7 @@ body {
 .nav-footer:hover span.heart {
     color: #ffa6cf;
 }
+
 .nav-footer > span {
     font-family: Raleway, sans-serif;
     display: block;
@@ -372,8 +375,37 @@ body {
     .section-content code {
         width: auto;
     }
+
     .navigation > div {
         border: 0;
+    }
+}
+
+@media only screen  and (max-height: 600px) {
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .navigation {
+        height: 100%;
+    }
+
+    .navigation > div {
+        position: relative;
+        height: auto;
+        border: 0;
+    }
+
+    .nav-heading {
+        height: auto !important;
+    }
+
+    .nav-link-container > li {
+        height: auto;
+    }
+
+    .section-content code {
+        width: auto;
     }
 }
 
