@@ -372,6 +372,9 @@ body {
     .section-content code {
         width: auto;
     }
+    .navigation > div {
+        border: 0;
+    }
 }
 
 @media print,
