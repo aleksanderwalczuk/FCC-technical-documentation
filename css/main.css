@@ -106,23 +106,29 @@ body {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 20vw auto;
-    grid-template-rows: 100% 100%;
-    grid-column-gap: 3px;
+    display: flex;
+    /*grid-template-columns: 20vw auto;*/
+    /*grid-template-rows: 1fr 1fr;*/
+    /*grid-column-gap: 3px;*/
     height: 100%;
     font-family: Roboto, sans-serif;
 }
 
 .navigation {
     background: #fff;
-    overflow: auto;
-    width: 20vw;
+    /*max-height: 100vh;*/
+    min-width: 240px;
+}
+.navigation > div {
     position: fixed;
+    min-width: inherit;
     border-right: 1px solid #000;
+    /*overflow: auto;*/
+    height: 100vh
+;
 }
 
-.navigation > .nav-heading {
+.navigation > div > .nav-heading {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -130,11 +136,18 @@ body {
     font-family: Raleway, sans-serif;
     background: #000;
     color: #fff;
+    height: 7.5vh;
 }
 
-.nav-heading > h1 {
+.nav-heading > div {
+    display: flex;
+    align-self: center;
+    height: min-content;
+}
+
+.nav-heading h1 {
     margin: 0;
-    padding: 20px 0 10px;
+    align-self: flex-end;
 }
 
 .nav-jsicon > i {
@@ -158,23 +171,27 @@ body {
 .nav-link-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    height: 100%;
+    overflow: auto;
 }
 
 .nav-link-container > li {
     text-align: center;
     width: 100%;
+    height: 5vh;
     border-bottom: 1px solid black;
+}
+.nav-link > span {
+    margin: auto;
 }
 
 /*Referring to last nav element*/
-.nav-link-container > li:last-child {
-    height: -webkit-fill-available;
+.navigation footer{
     width: 100%;
     background: #FFEF80;
-    max-height: 60px;
+    /*height: 10vh;*/
 }
 
 .nav-footer {
@@ -192,13 +209,12 @@ body {
     color: #222222;
     font-size: 12px;
     width: 100%;
-    height: 100%;
     /*line-height: 30px;*/
     /*padding: 5px;*/
 }
 
 .nav-link {
-    display: block;
+    display: flex;
     text-decoration: none;
     padding: 10px;
     color: #000;
@@ -219,18 +235,17 @@ body {
 .nav-footer {
     display: flex;
     width: 100%;
-    height: inherit;
+    height: 12.5vh;
     text-align: center;
     text-decoration: none;
     color: #fff;
 }
 
 .main {
-    grid-column-start: 2;
+    /*grid-column-start: 2;*/
     background: #ffffff;
     padding: 10px;
     overflow: auto;
-    width: 100%;
 }
 
 .main-section {
@@ -344,8 +359,19 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 500px) {
     /* Style adjustments for viewports that meet the condition */
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .navigation > div {
+        position: relative;
+    }
+
+    .section-content code {
+        width: auto;
+    }
 }
 
 @media print,
