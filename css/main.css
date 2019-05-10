@@ -390,6 +390,86 @@ textarea {
   }
 }
 @media only screen and (max-height: 600px) {
+  .burger {
+    display: block !important;
+    position: fixed;
+    right: 1em;
+  }
+
+  .hamburger {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .hamburger:focus > .hamburger-container {
+    box-shadow: 0 0 2px 2px #51a7e8;
+  }
+
+  .hamburger-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .hamburger-bars {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 220ms ease-in-out;
+    display: block;
+  }
+
+  .bar-1 {
+    position: absolute;
+    top: 1.4em;
+    transform: rotate(225deg);
+    transition: transform 220ms 120ms ease-in-out;
+  }
+
+  .bar-2 {
+    position: absolute;
+    top: 1.4em;
+    transform: rotate(-45deg);
+    transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+  }
+
+  .bar-3 {
+    display: none;
+  }
+
+  .hamburger-active .bar-1 {
+    position: initial;
+    transform: rotate(0deg);
+    transition: transform 220ms 120ms ease-in-out;
+  }
+  .hamburger-active .bar-2 {
+    position: initial;
+    transform: rotate(0deg);
+    transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+  }
+  .hamburger-active .bar-3 {
+    display: block;
+  }
+
+  .hamburger:focus, .hamburger-container:focus {
+    outline: none;
+  }
+
+  .burger-link {
+    display: block;
+    line-height: 0;
+  }
+
+  .height-auto {
+    height: auto !important;
+  }
+
   .grid-container {
     display: flex;
     flex-direction: column;
