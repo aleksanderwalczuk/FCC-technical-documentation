@@ -6,12 +6,29 @@
     <title>JavaScript Cookbook</title>
     <meta name="description" content="JS, JavaScript, Cookbook, rednaxela700">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"-->
+          <!--integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:400" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -32,7 +49,7 @@
                 </div>
                 <div class="burger">
                     <button class="hamburger" aria-label="Menu">
-                        <a href="#main-container" class="burger-link">
+                        <a href="#main-container" class="burger-link" aria-label="hamburger menu">
                     <span class="hamburger-container" tabindex="-1">
 
                         <span class="hamburger-bars bar-1"></span>
@@ -596,15 +613,15 @@
                 </div>
                 <div class="footer-icons-container">
                     <div class="footer-icon">
-                        <a href="https://github.com/Rednaxela700"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Rednaxela700"><i class="icon-github-circled" aria-label="GitHub link:"></i></a>
                     </div>
                     <div class="footer-icon">
-                        <a href="https://www.linkedin.com/in/aleksanderwalczuk547777735/"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/aleksanderwalczuk547777735/" aria-label="LinkedIn link:"><i
+                                class="icon-linkedin"></i></a>
                     </div>
                     <div class="footer-icon">
-                        <a href="mailto:olek.walczuk@gmail.com?Subject=JS-Documentation%20Contact%20message">
-                            <i class="fas fa-envelope"></i>
+                        <a href="mailto:olek.walczuk@gmail.com?Subject=JS-Documentation%20Contact%20message" aria-label="Email link:">
+                            <i class="icon-mail-alt"></i>
                         </a>
                     </div>
                 </div>
@@ -614,8 +631,6 @@
 
 </div>
 
-<script src="js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
@@ -639,6 +654,15 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 </script>
+<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(function() {
+                console.log('Service Worker Registered');
+            });
+    }
+</script>
+
 </body>
 
 </html>
