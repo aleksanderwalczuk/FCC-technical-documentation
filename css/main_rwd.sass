@@ -1,0 +1,60 @@
+@import "mixins"
+@media only screen and (max-width: 500px)
+  @import "hamb"
+  .grid-container
+    @include flexCol
+  .navigation
+    .nav-heading
+      justify-content: space-around
+    div.resizable
+      position: relative
+      border: 0
+  .main-section
+    padding: 0 0.5em
+  .section-content
+    code
+      width: auto
+  .footer
+    > div
+      height: auto
+  .footer-icon
+    @include flexCol
+    justify-content: center
+    padding: 5px
+    > a i
+      font-size: 18px
+      color: #000
+@media only screen and (max-height: 600px)
+  .grid-container
+    @include flexCol
+  .navigation
+    height: 100%
+    div.resizable
+      position: relative
+      height: auto
+      border: 0
+  .nav-heading
+    height: auto !important
+  .nav-link-container
+    li
+      height: auto !important
+      padding: 0
+  .main-section
+    padding: 0 0.5em
+  .section-content
+    code
+      width: auto
+  .footer
+    > div
+      height: auto
+  .footer-icon
+    @include flexCol
+    justify-content: center
+    padding: 5px
+    > a i
+      font-size: 24px
+      color: #000
+
+@media only screen and (max-width: 321px)
+  .nav-heading
+    justify-content: space-between !important
